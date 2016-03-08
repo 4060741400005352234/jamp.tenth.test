@@ -13,4 +13,14 @@ public final class Util {
         }
         return result.toString();
     }
+
+    public static long computeFactorial(int n) {
+        if (n < 0)
+            throw new IllegalArgumentException("Parameter is less than 0.");
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * computeFactorial(n - 1);
+        }
+    }
 }
